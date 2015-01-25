@@ -8,7 +8,7 @@ result = [u'<?xml version="1.0"?>', u'<items>']
 
 #精品区
 try:
-	url = "http://s.video.qq.com/search?comment=1&stype=0&plat=2&otype=json&query=一步之遥&start=0&end=5"
+	url = "http://s.video.qq.com/search?comment=1&stype=0&plat=2&otype=json&query={query}&start=0&end=5"
 
 	req = urllib2.Request(url)
 	r = urllib2.urlopen(req)
@@ -27,7 +27,7 @@ except (KeyError) as e:
 	pass
 
 #综合区
-url = "http://s.video.qq.com/search?comment=0&stype=0&plat=2&otype=json&query=一步之遥&start=0&end=5"
+url = "http://s.video.qq.com/search?comment=0&stype=0&plat=2&otype=json&query={query}&start=0&end=5"
 
 req = urllib2.Request(url)
 r = urllib2.urlopen(req)
