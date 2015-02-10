@@ -19,7 +19,7 @@ try:
 	for i,item in enumerate(sou_json_result["list"]):
 		ti = item["TI"].replace('<em  class="c_txt3">','').replace('</em>','')
 		result.append(u'<item uid="tenvideosou' + str(i) + u'" arg="' + item["AW"] + u'">')
-		result.append(u'<title>' + ti + u'</title>')
+		result.append(u'<title>[精品区]' + ti + u'</title>')
 		result.append(u'<subtitle>观看视频</subtitle>')
 		result.append(u'<icon>icon.png</icon>')
 		result.append(u'</item>')
@@ -38,7 +38,7 @@ sou_json_result = json.loads(r.read().replace('QZOutputJson=', '').strip(';'))
 for i,item in enumerate(sou_json_result["list"]):
 	ti = item["TI"].replace('<em  class="c_txt3">','').replace('</em>','')
 	result.append(u'<item uid="tenvideosou' + str(i) + u'" arg="' + item["AW"] + u'">')
-	result.append(u'<title>' + ti + u'</title>')
+	result.append(u'<title>[综合区]' + ti + u'</title>')
 	result.append(u'<subtitle>观看视频</subtitle>')
 	result.append(u'<icon>icon.png</icon>')
 	result.append(u'</item>')
